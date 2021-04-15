@@ -1,0 +1,165 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    /* ----Variables---- */
+    /* Colors */
+    --g-green: #81c995;
+    --g-orange: #fdd663;
+    --g-red: #f28b82;
+    --g-blue: #8ab4f8;
+    --m-bg: #121212;
+    --opp-bg: #fefefe;
+    /* Values */
+    --funny-radius: 1rem;
+    --dont-use-this-radius: 9999rem;
+
+    background-color: var(--m-bg);
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Europa Regular', sans-serif;
+}
+
+section.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero */
+
+/* Wrapper */
+.h-wp {
+    padding-top: 60px;
+}
+
+/* Every hero object */
+.hero {
+    position: relative;
+    margin: .25rem;
+
+    /* Animations */
+    animation-delay: .4s;
+    transition: all .2s ease-in-out;
+    animation: l-anim;
+
+    /* Colors */
+    background-color: var(--h-bg);
+    border: .25rem solid var(--h-bg);
+}
+.hero:hover {
+    background-color: var(--opp-bg);
+    border-width: 0;
+    margin: .25rem;
+}
+
+/* Style fonts */
+.hero h1 { font-size: 4em; }
+.hero h2 { font-size: 2em; }
+.hero h3 { font-size: 1.5em; }
+.hero h4 { font-size: 1em; }
+
+.hero > .hr-c {
+    --c-padding: 2rem;
+    padding: var(--c-padding);
+    height: calc(100% - calc(var(--c-padding) * 2));
+    width: calc(100% - calc(var(--c-padding) * 2));
+    max-width: calc(100vw - 2rem);
+    display: flex;
+    align-items: center;
+}
+.hero > .hr-c > *:first-child {
+    margin-top: 0
+}
+.hero > .hr-c > *:last-child {
+    margin-bottom: 0;
+}
+
+.hero.v-rd > .hr-c {
+    --c-padding: 3rem;
+}
+
+.hero.hero__l1 { /* Left Row 1 */
+    grid-area: l1;
+    --h-bg: var(--g-green, forestgreen);
+    border-radius: var(--dont-use-this-radius, 999rem);
+
+    height: 26vw;
+    width: 52vw;
+    min-height: 160px;
+    min-width: 320px;
+}
+.hero.hero__r1 { /* Right Row 1 */
+    grid-area: r1;
+    --h-bg: var(--g-orange, orange);
+    border-radius: var(--funny-radius, 1rem);
+
+    height: 26vw;
+    width: 24vw;
+    min-height: 146px;
+    min-width: 146px;
+}
+.hero.hero__l2 { /* Left Row 2 */
+    grid-area: l2;
+    --h-bg: var(--g-red, red);
+    border-radius: var(--dont-use-this-radius, 999rem);
+
+    width: 22vw;
+    height: 22vw;
+    min-height: 146px;
+    min-width: 146px;
+}
+.hero.hero__r2 { /* Right Row 2 */
+    grid-area: r2;
+    --h-bg: var(--g-blue, steelblue);
+    border-radius: var(--funny-radius, 1rem);
+
+    height: 22vw;
+    width: 54vw;
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        min-width: 400px;
+        max-height: 44vh;
+        margin: .375rem;
+    }
+
+    .hero.hero__r2 {
+        width: 60vw;
+        max-height: 40vh;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .hero.hero__r2 {
+        width: 52vw;
+    }
+    .h-wp {
+        padding-top: 142px;
+    }
+}
+
+/* ------Keyframes------ */
+@keyframes l-anim {
+    0% {
+        background-color: transparent;
+        color: transparent;
+    }
+    60% {
+        background-color: transparent;
+        color: transparent;
+    }
+    100% {
+        opacity: 1;
+    }
+}

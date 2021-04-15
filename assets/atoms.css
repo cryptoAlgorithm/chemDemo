@@ -1,0 +1,10 @@
+.fh {
+    min-height: 100vh;
+}
+
+/* Ratios */
+.ratio__1-1:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
