@@ -44,8 +44,9 @@ main {
 
 /* Every hero object */
 .hero {
+    --h-mg: .25rem;
     position: relative;
-    margin: .25rem;
+    margin: var(--h-mg);
 
     /* Animations */
     animation-delay: .4s;
@@ -54,12 +55,13 @@ main {
 
     /* Colors */
     background-color: var(--h-bg);
-    border: .25rem solid var(--h-bg);
+    border: .15rem solid var(--h-bg);
 }
 .hero:hover {
     background-color: var(--opp-bg);
-    border-width: 0;
-    margin: .25rem;
+    /*border-width: 0;
+    margin: calc(var(--h-mg) + .2rem);*/
+    border-color: var(--m-bg);
 }
 
 /* Style fonts */
@@ -86,6 +88,7 @@ main {
 
 .hero.v-rd > .hr-c {
     --c-padding: 3rem;
+    text-align: center;
 }
 
 .hero.hero__l1 { /* Left Row 1 */
@@ -131,7 +134,7 @@ main {
     .hero {
         min-width: 400px;
         max-height: 44vh;
-        margin: .375rem;
+        --h-mg: .375rem
     }
 
     .hero.hero__r2 {
