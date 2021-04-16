@@ -2,6 +2,24 @@
     min-height: 100vh;
 }
 
+.ctr-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt-c {
+    text-align: center;
+}
+.fs-3 { font-size: 3em; }
+.fs-2__5 { font-size: 2.5em;}
+.fs-2 { font-size: 2em; }
+.fs-1__5 { font-size: 1.5em; }
+.fs-1 { font-size: 1em; }
+.fs-__5 { font-size: .5em; }
+
+.w-100 { width: 100%; }
+
 /* Ratios */
 .ratio__1-1:after {
     content: "";

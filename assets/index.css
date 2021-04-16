@@ -10,22 +10,23 @@ body {
     --g-blue: #8ab4f8;
     --m-bg: #121212;
     --opp-bg: #fefefe;
+    --ab-bg: rgba(0, 0, 0, .6);
+    --flat-bg: #3f3f3f;
+    --raised-bg: #5f5f5f;
+    --higher-raised-bg: #7f7f7f;
+    --max-raised-bg: #8f8f8f;
     /* Values */
     --funny-radius: 1rem;
+    --funnier-radius: 1.5rem;
     --dont-use-this-radius: 9999rem;
 
     background-color: var(--m-bg);
     font-family: 'Raleway', sans-serif;
+    color: var(--opp-bg, #eee);
 }
 
 h1, h2, h3, h4 {
     font-family: 'Europa Regular', sans-serif;
-}
-
-section.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 main {
@@ -39,7 +40,6 @@ main {
 
 /* Wrapper */
 .h-wp {
-    padding-top: 60px;
 }
 
 /* Every hero object */
@@ -47,6 +47,7 @@ main {
     --h-mg: .25rem;
     position: relative;
     margin: var(--h-mg);
+    overflow: hidden;
 
     /* Animations */
     animation-delay: .4s;
@@ -65,10 +66,11 @@ main {
 }
 
 /* Style fonts */
-.hero h1 { font-size: 4em; }
-.hero h2 { font-size: 2em; }
-.hero h3 { font-size: 1.5em; }
-.hero h4 { font-size: 1em; }
+.hero h1, .hero h2, .hero h3, .hero h4 { color: var(--m-bg); }
+.hero h1 { font-size: 3em; }
+.hero h2 { font-size: 1.5em; }
+.hero h3 { font-size: 1.2em; }
+.hero h4 { font-size: .75em; }
 
 .hero > .hr-c {
     --c-padding: 2rem;
@@ -87,7 +89,7 @@ main {
 }
 
 .hero.v-rd > .hr-c {
-    --c-padding: 3rem;
+    --c-padding: 1rem;
     text-align: center;
 }
 
@@ -130,6 +132,50 @@ main {
     width: 54vw;
 }
 
+/* ------Promotion------ */
+
+div.promo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+div.promo > div.p-card {
+    width: calc(min(50vw, 480px) - 5rem);
+    height: calc(min(50vw, 480px) - 5rem);
+    border-radius: var(--funnier-radius, 1rem);
+    background-color: var(--flat-bg);
+    position: relative;
+    padding: 0 1.5rem;
+}
+div.promo > div.p-card.c-1 {
+    background: linear-gradient(315deg, rgb(24, 154, 191) 0%, #000851 100%);
+}
+div.promo > div.p-card.c-2 {
+    background: linear-gradient(45deg, #4b6cb7 0%, #182848 100%);
+}
+div.promo > div.p-card.c-3 {
+    background: linear-gradient(125deg, #240b36, #c31432);
+}
+div.promo > div.p-card.c-4 {
+    background: linear-gradient(315deg, #eb5757, #000000);
+}
+
+
+@media screen and (min-width: 600px) {
+    .hero.hero__r2 {
+        width: 52vw;
+    }
+    .hero.v-rd > .hr-c {
+        --c-padding: 3rem;
+    }
+    .hero.v-rd.hero__l2 > .hr-c {
+        --c-padding: .4rem;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .hero {
         min-width: 400px;
@@ -141,15 +187,35 @@ main {
         width: 60vw;
         max-height: 40vh;
     }
+
+    .hero.v-rd.hero__l2 > .hr-c {
+        --c-padding: 1rem;
+    }
 }
 
-@media screen and (min-width: 600px) {
-    .hero.hero__r2 {
-        width: 52vw;
+@media screen and (min-width: 1000px) {
+    div.promo > div.p-card {
+        padding: .5rem 2rem;
     }
-    .h-wp {
-        padding-top: 142px;
+
+    .hero h1 { font-size: 4em; }
+    .hero h2 { font-size: 2em; }
+    .hero h3 { font-size: 1.5em; }
+    .hero h4 { font-size: 1em; }
+}
+
+@media screen and (max-width: 500px) {
+    .hero.hero__r1 > .hr-c {
+        --c-padding: .75rem;
     }
+}
+
+/* More button */
+
+div.promo > div.p-card > button.ic-btn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
 }
 
 /* ------Keyframes------ */
