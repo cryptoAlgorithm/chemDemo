@@ -10,12 +10,17 @@ body {
     --g-blue: #8ab4f8;
     --m-bg: #121212;
     --opp-bg: #fefefe;
+    --brand: #1976d2;
+    --p-brand: #1668ba;
+    --s-brand: #13589c;
+    --on-brand: #fff;
     --ab-bg: rgba(0, 0, 0, .6);
     --flat-bg: #3f3f3f;
     --raised-bg: #5f5f5f;
     --higher-raised-bg: #7f7f7f;
     --max-raised-bg: #8f8f8f;
     /* Values */
+    --not-funny-radius: .4rem;
     --funny-radius: 1rem;
     --funnier-radius: 1.5rem;
     --dont-use-this-radius: 9999rem;
@@ -128,7 +133,7 @@ main {
     --h-bg: var(--g-blue, steelblue);
     border-radius: var(--funny-radius, 1rem);
 
-    height: 22vw;
+    height: 36vw;
     width: 54vw;
 }
 
@@ -136,19 +141,21 @@ main {
 
 div.promo {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
     grid-gap: 1rem;
     padding: 1rem;
 }
 
 div.promo > div.p-card {
-    width: calc(min(50vw, 480px) - 5rem);
-    height: calc(min(50vw, 480px) - 5rem);
+    width: calc(min(100vw, 450px) - 5rem);
+    height: calc(min(100vw, 450px) - 5rem);
     border-radius: var(--funnier-radius, 1rem);
     background-color: var(--flat-bg);
     position: relative;
     padding: 0 1.5rem;
+
+    overflow: hidden;
 }
 div.promo > div.p-card.c-1 {
     background: linear-gradient(315deg, rgb(24, 154, 191) 0%, #000851 100%);
@@ -164,15 +171,115 @@ div.promo > div.p-card.c-4 {
 }
 
 
+/* More button */
+
+div.promo > div.p-card > button.ic-btn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    transition: background-color .2s ease-in-out, opacity .2s ease-in-out, transform .66s cubic-bezier(0.66, 0, 0.2, 1);
+    z-index: 10;
+}
+div.promo > div.p-card.open > button.ic-btn {
+    transform: rotate(45deg);
+    background-color: var(--opp-bg);
+}
+div.promo > div.p-card.open > button.ic-btn > img {
+    filter: invert(1);
+}
+
+/* Card modal */
+
+div.promo > div.p-card.c-1 > div.p-modal { --pm-bg: var(--g-green) }
+div.promo > div.p-card.c-2 > div.p-modal { --pm-bg: var(--g-orange) }
+div.promo > div.p-card.c-3 > div.p-modal { --pm-bg: var(--g-red) }
+div.promo > div.p-card.c-4 > div.p-modal { --pm-bg: var(--g-blue) }
+
+div.promo > div.p-card > div.p-modal {
+    background-color: var(--pm-bg);
+
+    opacity: 0;
+    visibility: hidden;
+    z-index: 6;
+    pointer-events: none;
+
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+
+    transition: opacity .66s .66s cubic-bezier(0.66, 0, 0.2, 1), visibility .66s .66s;
+}
+div.promo > div.p-card.open > div.p-modal {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Modal text */
+div.promo > div.p-card > div.p-modal {
+    color: var(--m-bg, #000);
+}
+div.promo > div.p-card > div.p-modal > div {
+    transition: all .66s .66s cubic-bezier(0.66, 0, 0.2, 1);
+    opacity: 0;
+}
+div.promo > div.p-card > div.p-modal > div > h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+div.promo > div.p-card.open > div.p-modal > div {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .66s .66s cubic-bezier(0.66, 0, 0.2, 1);
+}
+
+/* ------Keyframes------ */
+@keyframes l-anim {
+    0% {
+        background-color: transparent;
+        color: transparent;
+    }
+    60% {
+        background-color: transparent;
+        color: transparent;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ------Responsiveness------ */
 @media screen and (min-width: 600px) {
     .hero.hero__r2 {
         width: 52vw;
+        height: 28vw;
     }
     .hero.v-rd > .hr-c {
         --c-padding: 3rem;
     }
     .hero.v-rd.hero__l2 > .hr-c {
         --c-padding: .4rem;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    div.promo {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    div.promo > div.p-card {
+        width: calc(min(50vw, 480px) - 5rem);
+        height: calc(min(50vw, 480px) - 5rem);
     }
 }
 
@@ -185,6 +292,7 @@ div.promo > div.p-card.c-4 {
 
     .hero.hero__r2 {
         width: 60vw;
+        height: 22vw;
         max-height: 40vh;
     }
 
@@ -207,28 +315,5 @@ div.promo > div.p-card.c-4 {
 @media screen and (max-width: 500px) {
     .hero.hero__r1 > .hr-c {
         --c-padding: .75rem;
-    }
-}
-
-/* More button */
-
-div.promo > div.p-card > button.ic-btn {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-}
-
-/* ------Keyframes------ */
-@keyframes l-anim {
-    0% {
-        background-color: transparent;
-        color: transparent;
-    }
-    60% {
-        background-color: transparent;
-        color: transparent;
-    }
-    100% {
-        opacity: 1;
     }
 }

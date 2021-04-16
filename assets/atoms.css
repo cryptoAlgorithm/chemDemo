@@ -2,6 +2,9 @@
     min-height: 100vh;
 }
 
+.fl-margin__0 > *:first-child { margin-top: 0 }
+.fl-margin__0 > *:last-child  { margin-bottom: 0 }
+
 .ctr-c {
     display: flex;
     align-items: center;
@@ -19,6 +22,12 @@
 .fs-__5 { font-size: .5em; }
 
 .w-100 { width: 100%; }
+
+.op-0 { opacity: 0 }
+
+.e-z12 {
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, .2), 0 12px 17px 2px rgba(0, 0, 0, .14), 0 5px 22px 4px rgba(0, 0, 0, .12);
+}
 
 /* Ratios */
 .ratio__1-1:after {
