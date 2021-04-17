@@ -1,4 +1,10 @@
-button {
+/* ------Buttons------ */
+
+button, .f-btn {
+    /* Make normal elements like <a> look like a button */
+    display: inline-block;
+    -webkit-tap-highlight-color: transparent;
+
     border: none;
     outline: none;
     min-height: 2rem;
@@ -19,12 +25,13 @@ button {
     font-family: "Europa Regular", Roboto, Helvetica, sans-serif;
     padding: 0 1rem;
 }
-button:hover  {
+button:hover, .f-btn:hover {
     background-color: var(--p-brand);
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
 }
-button:active { background-color: var(--s-brand); }
+button:active, .f-btn:active { background-color: var(--s-brand); }
 
+/* Icon button */
 button.ic-btn {
     height: 2.5rem;
     width: 2.5rem;
@@ -71,12 +78,42 @@ header.v {
 
 header > * { margin: 0; }
 
+/* A better divider */
+.btr-br {
+    height: 1px;
+    background-color: var(--not-that-opp-bg);
+    border-radius: 1px;
+}
+
+/* Sensible defaults */
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 
 /* ------Footer------ */
 footer {
     background-color: var(--flat-bg);
     border-radius: var(--funny-radius) var(--funny-radius) 0 0;
     padding: 1rem;
+}
+footer > div.fr {
+    display: flex;
+    flex-wrap: wrap;
+    margin: .5rem 0;
+}
+/* Space filler */
+footer > div.fr > div.ff {
+    flex-grow: 1;
+}
+/* Spacing between 2 items */
+footer > div.fr > * {
+    margin: 0 .5rem 0 0;
+}
+footer > div.fr > *:last-child {
+    margin-right: 0;
 }
 
 /* ====== Custom scrollbar ======= */
