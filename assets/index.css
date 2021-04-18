@@ -15,7 +15,7 @@ main {
     overflow: hidden;
 
     /* Animations */
-    animation-delay: 1s;
+    animation-delay: 2s;
     transition: all .2s ease-in-out;
     animation: 1s l-anim;
 
