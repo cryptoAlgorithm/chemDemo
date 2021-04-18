@@ -7,10 +7,6 @@ main {
 
 /* Hero */
 
-/* Wrapper */
-.h-wp {
-}
-
 /* Every hero object */
 .hero {
     --h-mg: .25rem;
@@ -19,9 +15,9 @@ main {
     overflow: hidden;
 
     /* Animations */
-    animation-delay: .4s;
+    animation-delay: 1s;
     transition: all .2s ease-in-out;
-    animation: l-anim;
+    animation: 1s l-anim;
 
     /* Colors */
     background-color: var(--h-bg);
@@ -214,11 +210,12 @@ div.promo > div.p-card.open > div.p-modal > div {
 @keyframes l-anim {
     0% {
         background-color: transparent;
-        color: transparent;
+        color: transparent !important;
+        opacity: 0;
     }
     60% {
         background-color: transparent;
-        color: transparent;
+        color: transparent !important;
     }
     100% {
         opacity: 1;

@@ -6,4 +6,6 @@ window.onscroll = (e) => {
     else if (window.scrollY < 8) q('header').classList.remove('v');
 }
 
-const th = new ThemeHandler($('tBtn'));
+new ThemeHandler($('tBtn'));
+
+onreadystatechange = console.log;
