@@ -59,11 +59,17 @@
 
 .dp-b { display: block }
 
-.brc {
+.blc, .brc {
     position: fixed;
     bottom: 1rem;
-    right: 1rem;
+    z-index: 12;
 }
+
+.brc { right: 1rem; }
+.blc { left: 1rem; }
+
+body:not(.lm) .lm { display: none; }
+body.lm .dm { display: none; }
 
 /* Ratios */
 .ratio__1-1:after {

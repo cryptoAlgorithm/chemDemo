@@ -4,6 +4,7 @@
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/assets/javascript/index.min.js" />
         <item url="file://$PROJECT_DIR$/assets/javascript/main.min.js" />
+        <item url="file://$PROJECT_DIR$/assets/javascript/viewer.min.js" />
         <item url="file://$PROJECT_DIR$/assets/lib/pCardHandler.min.js" />
         <item url="file://$PROJECT_DIR$/assets/lib/ripple.min.js" />
         <item url="file://$PROJECT_DIR$/assets/lib/themeHandler.min.js" />
@@ -13,6 +14,7 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/assets/javascript/index.min.js" />
       <root url="file://$PROJECT_DIR$/assets/javascript/main.min.js" />
+      <root url="file://$PROJECT_DIR$/assets/javascript/viewer.min.js" />
       <root url="file://$PROJECT_DIR$/assets/lib/pCardHandler.min.js" />
       <root url="file://$PROJECT_DIR$/assets/lib/ripple.min.js" />
       <root url="file://$PROJECT_DIR$/assets/lib/themeHandler.min.js" />

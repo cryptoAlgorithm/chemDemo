@@ -6,11 +6,21 @@ body {
     overflow: hidden;
 }
 
-main {
+div.c {
     background-color: var(--ab-bg);
     max-height: 80vh;
     max-width: 80vh;
     overflow: auto;
     backdrop-filter: var(--misty);
     transition: background-color .44s ease-in-out;
+    display: none;
 }
+
+/* Default page */
+div.c.c__l { display: block; }
+body.p__green div.c.c__l, body.p__blue div.c.c__l, body.p__grey div.c.c__l, body.p__turquoise div.c.c__l { display: none; }
+
+body.p__green div.c.c__green { display: block; }
+body.p__blue div.c.c__blue { display: block; }
+body.p__grey div.c.c__grey { display: block; }
+body.p__turquoise div.c.c__t { display: block; }

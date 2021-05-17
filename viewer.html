@@ -20,16 +20,30 @@
 
     <script src="assets/lib/themeHandler.min.js" defer></script>
     <script src="assets/lib/ripple.min.js" defer></script>
+    <script src="assets/javascript/viewer.min.js" defer></script>
     <script src="assets/javascript/main.min.js" defer></script>
 </head>
 <body class="ctr-c fh">
 <!-- Bottom right theme button -->
 <button class="ic-btn ctr-c brc" id="tBtn">
-    <img src="static/icns/dark_mode_white.svg" alt="Change to dark theme" class="l" style="display:none">
-    <img src="static/icns/light_mode_white.svg" alt="Change to light theme" class="d">
+    <img src="static/icns/dark_mode_white.svg" alt="Change to dark theme" class="l lm">
+    <img src="static/icns/light_mode_white.svg" alt="Change to light theme" class="d dm">
 </button>
+<!-- Bottom left home button -->
+<button class="ic-btn ctr-c blc" onclick="document.location = './index.html'">
+    <img src="static/icns/home_white.svg" alt="Go home" class="l">
+</button>
+
+<div class="txt-c p-txt__bg rd__1 fl-margin__0 c c__l">
+    <h3>Loading, please wait...</h3>
+    <div class="btr-br fb"></div>
+    <p>If this message does not go away in a few seconds, please reload the page</p>
+    <button class="btn-rp f-btn" onclick="document.location.reload()">Reload</button>
+</div>
+
+<!-- Content -->
 <!------>
-<main class="txt-c p-txt__bg rd__1 fl-margin__0" style="margin-left: 10px">
+<div class="txt-c p-txt__bg rd__1 fl-margin__0 c c__grey">
     <h3 class="fs-3 mg-b__-75">Grey Ammonia</h3>
     <div class="btr-br fb"></div>
     <!------>
@@ -37,8 +51,8 @@
         The Haber-Bosch process, responsible for nearly all of the world’s 180 million tons of annual ammonia production,
         reacts hydrogen and atmospheric nitrogen.
         The hydrogen often comes from the steam reformation of methane, a process that emits CO2.</p>
-</main>
-<main class="txt-c p-txt__bg rd__1 fl-margin__0" style="margin-left: 10px">
+</div>
+<div class="txt-c p-txt__bg rd__1 fl-margin__0 c c__blue">
     <h3 class="fs-3 mg-b__-75">Blue Ammonia</h3>
     <div class="btr-br fb"></div>
     <!------>
@@ -48,8 +62,8 @@
         Blue ammonia is controversial and in need of industry standards.
         Using CO2 for enhanced oil recovery, for example,
         isn’t as environmentally beneficial as injecting it into the ground permanently.</p>
-</main>
-<main class=" p-txt__bg rd__1 fl-margin__0" style="margin-left: 10px">
+</div>
+<div class=" p-txt__bg rd__1 fl-margin__0 c c__green">
     <h3 class="fs-3 mg-b__-75">Green Ammonia</h3>
     <div class="btr-br fb"></div>
     <!------>
@@ -57,8 +71,8 @@
         Projects abound, though most are on a modest scale of tens of thousands of tons,
         an order of magnitude smaller than a typical ammonia plant.
         A massive project in Saudi Arabia, however, aims to make more than 1 million metric tons of ammonia per year.</p>
-</main>
-<main class="txt-c p-txt__bg rd__1 fl-margin__0" style="margin-left: 10px">
+</div>
+<div class="txt-c p-txt__bg rd__1 fl-margin__0 c c__t">
     <h3 class="fs-3 mg-b__-75">Turquoise Ammonia</h3>
     <div class="btr-br fb"></div>
     <!------>
@@ -66,6 +80,6 @@
         which is reacted with nitrogen to make ammonia.
         The industry thinks of turquoise ammonia as somewhere between green and blue.
         A prominent project is Monolith Materials’ carbon black plant in Nebraska.</p>
-</main>
+</div>
 </body>
 </html>
