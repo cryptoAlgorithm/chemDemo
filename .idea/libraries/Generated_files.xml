@@ -7,6 +7,7 @@
         <item url="file://$PROJECT_DIR$/assets/lib/pCardHandler.min.js" />
         <item url="file://$PROJECT_DIR$/assets/lib/ripple.min.js" />
         <item url="file://$PROJECT_DIR$/assets/lib/themeHandler.min.js" />
+        <item url="file://$PROJECT_DIR$/assets/lib/themeHandler.min.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -15,6 +16,7 @@
       <root url="file://$PROJECT_DIR$/assets/lib/pCardHandler.min.js" />
       <root url="file://$PROJECT_DIR$/assets/lib/ripple.min.js" />
       <root url="file://$PROJECT_DIR$/assets/lib/themeHandler.min.js" />
+      <root url="file://$PROJECT_DIR$/assets/lib/themeHandler.min.min.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
