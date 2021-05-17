@@ -8,6 +8,7 @@
 .mg-b__1 { margin-bottom: 1rem }
 .mg-b__-75 { margin-bottom: .75rem }
 .mg-r__1 { margin-right: 1rem }
+.mg-r__-25 { margin-right: .25rem }
 .mg-r__-75 { margin-right: .75rem }
 .mg-l__1 { margin-left: 1rem }
 .mg-l__-75 { margin-left: .75rem }
@@ -77,3 +78,5 @@ body.lm .dm { display: none; }
     display: block;
     padding-bottom: 100%;
 }
+
+.d-f { display: flex; }

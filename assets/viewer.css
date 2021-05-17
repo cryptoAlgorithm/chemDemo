@@ -7,13 +7,10 @@ body {
 }
 
 div.c {
-    background-color: var(--ab-bg);
+    display: none;
     max-height: 80vh;
     max-width: 80vh;
     overflow: auto;
-    backdrop-filter: var(--misty);
-    transition: background-color .44s ease-in-out;
-    display: none;
 }
 
 /* Default page */

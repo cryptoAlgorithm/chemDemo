@@ -175,6 +175,14 @@ img {
 }
 
 
+
+div.c {
+    background-color: var(--ab-bg);
+    backdrop-filter: var(--misty);
+    transition: background-color .44s ease-in-out;
+}
+
+
 /* ------Footer------ */
 footer {
     background-color: var(--flat-bg);
