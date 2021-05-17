@@ -7,11 +7,13 @@ class ThemeHandler {
         localStorage.theme = nVal ? 'light' : 'dark';
         if (this.theme) {
             document.body.classList.add('lm');
-            this.icn.src = 'static/icns/dark_mode_white.svg';
+            this.lIcn.style.display = 'none';
+            this.dIcn.style.display = 'block';
         }
         else {
             document.body.classList.remove('lm');
-            this.icn.src = 'static/icns/light_mode_white.svg';
+            this.lIcn.style.display = 'block';
+            this.dIcn.style.display = 'none';
         }
     }
 
@@ -20,7 +22,8 @@ class ThemeHandler {
     }
 
     constructor(ttBtn) {
-        this.icn = ttBtn.querySelector('img');
+        this.lIcn = ttBtn.querySelector('img.l');
+        this.dIcn = ttBtn.querySelector('img.d');
 
         ttBtn.onclick = () => {
             this.toggle();

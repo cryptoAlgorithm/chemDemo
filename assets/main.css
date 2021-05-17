@@ -29,6 +29,7 @@ body {
     --funnier-radius: 1.5rem;
     --dont-use-this-radius: 9999rem;
     --theme-trans-time: .44s;
+    --misty: blur(12px) saturate(120%) brightness(120%);
 
     background-color: var(--m-bg);
     font-family: 'Raleway', "Helvetica Neue", Helvetica, Courier, sans-serif;
@@ -116,10 +117,10 @@ button.ic-btn:hover {
 button.ic-btn:active { background-color: var(--raised-bg, #888); }
 
 /* Theme toggler */
-button.ic-btn#tBtn > img {
-    transition: transform .4s cubic-bezier(0.53, 0.53, 0.49, 1.59);
+button.ic-btn#tBtn {
+    transition: all .4s cubic-bezier(0.53, 0.53, 0.49, 1.59);
 }
-body.lm button.ic-btn#tBtn > img {
+body.lm button.ic-btn#tBtn {
     transform: rotate(-360deg);
 }
 
@@ -150,7 +151,7 @@ header {
 
     transition: top .3s cubic-bezier(.4, 0, 0, 1);
     background-color: var(--ab-bg, #111);
-    backdrop-filter: blur(12px) saturate(120%) brightness(120%);
+    backdrop-filter: var(--misty);
     border-radius: 0 0 var(--funny-radius) var(--funny-radius);
 }
 header.v {
@@ -184,6 +185,9 @@ footer > div.fr {
     display: flex;
     flex-wrap: wrap;
     margin: .7rem 0;
+}
+footer > div.fr > a {
+    color: var(--g-blue);
 }
 
 /* ====== Custom scrollbar ======= */

@@ -1,6 +1,4 @@
-.fh {
-    min-height: 100vh;
-}
+.fh { min-height: 100vh }
 
 .fl-margin__0 > *:first-child { margin-top: 0 }
 .fl-margin__0 > *:last-child  { margin-bottom: 0 }
@@ -17,6 +15,11 @@
 .mg-l__-25 { margin-left: .25rem }
 
 .p-txt { padding: 1rem }
+.p-txt__bg { padding: 1.2rem 1.5rem 1.5rem 1.5rem }
+.p-txt__bg > .fb {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
 
 .ctr-c {
     display: flex;
@@ -53,6 +56,14 @@
 /* Spacing between 2 items */
 .fr > * { margin: 0 .5rem 0 0 }
 .fr > *:last-child { margin-right: 0 }
+
+.dp-b { display: block }
+
+.brc {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
 
 /* Ratios */
 .ratio__1-1:after {

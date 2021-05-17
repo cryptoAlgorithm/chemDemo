@@ -1,0 +1,16 @@
+body {
+    background-image: url("../static/img/horizon.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+main {
+    background-color: var(--ab-bg);
+    max-height: 80vh;
+    max-width: 80vh;
+    overflow: auto;
+    backdrop-filter: var(--misty);
+    transition: background-color .44s ease-in-out;
+}
