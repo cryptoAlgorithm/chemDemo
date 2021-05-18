@@ -6,24 +6,67 @@ body {
     overflow: hidden;
 }
 
+p {
+    line-height: 1.4;
+}
+
 div.c {
     display: none;
     max-height: 80vh;
-    max-width: 80vh;
+    max-width: 70vw;
     overflow: auto;
+    padding: 1.2rem 0 0 0;
+    overflow-x: hidden;
 }
 
 nav {
     display: flex;
-    margin: 0 -1.5rem;
+    position: relative;
 }
+nav > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: .25rem;
+    background-color: var(--brand);
+    border-radius: 4px 4px 0 0;
+    transition: left .2s ease-in-out;
+}
+body.s1 nav > div { left: 0 }
+body.s2 nav > div { left: 25% }
+body.s3 nav > div { left: 50% }
+body.s4 nav > div { left: 75% }
 nav > button {
-    flex-grow: 1;
+    width: 25%;
     box-shadow: none;
     border-radius: 0;
     background-color: var(--ab-bg);
 }
 
+div.cs {
+    display: flex;
+    width: 400%;
+    margin-left: 0;
+    transition: margin-left .2s ease-in-out;
+}
+body.s1 div.cs { margin-left: 0 }
+body.s2 div.cs { margin-left: -100% }
+body.s3 div.cs { margin-left: -200% }
+body.s4 div.cs { margin-left: -300% }
+
+div.cs > div {
+    width: 100%;
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-in-out;
+}
+
+body.s1 div.cs > div.o { max-height: 1000px }
+body.s2 div.cs > div.t { max-height: 1000px }
+body.s3 div.cs > div.th { max-height: 1000px }
+body.s4 div.cs > div.f { max-height: 1000px }
 
 /* Default page */
 div.c.c__l { display: block; }
