@@ -13,6 +13,18 @@ div.c {
     overflow: auto;
 }
 
+nav {
+    display: flex;
+    margin: 0 -1.5rem;
+}
+nav > button {
+    flex-grow: 1;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: var(--ab-bg);
+}
+
+
 /* Default page */
 div.c.c__l { display: block; }
 body.p__green div.c.c__l, body.p__blue div.c.c__l, body.p__grey div.c.c__l, body.p__turquoise div.c.c__l { display: none; }

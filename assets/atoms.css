@@ -80,3 +80,9 @@ body.lm .dm { display: none; }
 }
 
 .d-f { display: flex; }
+
+.bg-f {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
