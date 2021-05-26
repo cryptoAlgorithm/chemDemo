@@ -116,7 +116,7 @@ button.ic-btn:hover {
 }
 button.ic-btn:active { background-color: var(--raised-bg, #888); }
 
-/* Theme toggler */
+/* Theme toggle */
 button.ic-btn#tBtn {
     transition: all .4s cubic-bezier(0.53, 0.53, 0.49, 1.59);
 }
@@ -139,7 +139,7 @@ button.ic-btn > img {
 /* ------Header------ */
 header {
     position: fixed;
-    top: -3.4rem;
+    margin-top: -3.4rem;
     left: 0;
     height: 3.4rem;
     z-index: 22;
@@ -149,13 +149,13 @@ header {
     align-items: center;
     padding: 0 1.2rem;
 
-    transition: top .3s cubic-bezier(.4, 0, 0, 1);
+    transition: margin-top .3s cubic-bezier(.4, 0, 0, 1);
     background-color: var(--ab-bg, #111);
     backdrop-filter: var(--misty);
     border-radius: 0 0 var(--funny-radius) var(--funny-radius);
 }
 header.v {
-    top: 0;
+    margin-top: 0;
 }
 
 header > * { margin: 0; }
@@ -182,6 +182,30 @@ div.c {
     transition: background-color .44s ease-in-out;
 }
 
+/* Table */
+table {
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid var(--not-that-opp-bg);
+    padding: .5rem;
+}
+thead > tr > th {
+    border-top: none;
+    padding-top: 1rem;
+}
+thead > tr > th:first-child, tbody > tr > td:first-child {
+    border-left: none;
+    padding-left: 1rem;
+}
+thead > tr > th:last-child, tbody > tr > td:last-child {
+    border-right: none;
+    padding-right: 1rem;
+}
+tbody > tr:last-child > td {
+    border-bottom: none;
+    padding-bottom: 1rem;
+}
 
 /* ------Footer------ */
 footer {
