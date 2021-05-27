@@ -3,10 +3,12 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/assets/javascript/main.min.js" />
+        <item url="file://$PROJECT_DIR$/assets/javascript/main.min.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/assets/javascript/main.min.js" />
+      <root url="file://$PROJECT_DIR$/assets/javascript/main.min.min.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
