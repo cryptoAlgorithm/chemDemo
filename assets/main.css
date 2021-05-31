@@ -13,6 +13,7 @@ body {
     --opp-bg: #fefefe;
     --not-that-opp-bg: rgba(255, 255, 255, .3);
     --brand: #1976d2;
+    --theme: var(--brand);
     --p-brand: #1668ba;
     --s-brand: #13589c;
     --on-brand: #fff;
@@ -49,6 +50,7 @@ body.lm {
     --opp-bg: #121212;
     --not-that-opp-bg: rgba(0, 0, 0, .3);
     --brand: #1976d2;
+    --theme: var(--brand);
     --p-brand: #1668ba;
     --s-brand: #13589c;
     --on-brand: #fff;
@@ -57,6 +59,7 @@ body.lm {
     --raised-bg: #ccc;
     --higher-raised-bg: #aaa;
     --max-raised-bg: #888;
+    --ripple-fill: #000;
 }
 
 h1, h2, h3, h4 {
@@ -67,35 +70,15 @@ h1, h2, h3, h4 {
 /* ------Buttons------ */
 
 button, .f-btn {
-    /* Make normal elements like <a> look like a button */
-    display: inline-block;
-    -webkit-tap-highlight-color: transparent;
-
     border: none;
-    outline: none;
-    min-height: 2rem;
-    border-radius: var(--not-funny-radius);
-
-    background-color: var(--brand);
-    color: var(--on-brand);
-    transition: background-color .2s ease-in-out, box-shadow .3s ease-in;
-
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
 
     font-size: .8rem;
-    line-height: 2.25rem;
     font-weight: 500;
     letter-spacing: .0892857143em;
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Europa Regular", Roboto, Helvetica, sans-serif;
-    padding: 0 1rem;
 }
-button:hover, .f-btn:hover {
-    background-color: var(--p-brand);
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
-}
-button:active, .f-btn:active { background-color: var(--s-brand); }
 
 /* Icon button */
 button.ic-btn {

@@ -39,7 +39,7 @@ body.s1 nav > div { left: 0 }
 body.s2 nav > div { left: 25% }
 body.s3 nav > div { left: 50% }
 body.s4 nav > div { left: 75% }
-nav > button {
+nav > button.btn {
     width: 25%;
     box-shadow: none;
     border-radius: 0;
@@ -47,6 +47,7 @@ nav > button {
     transition: all .44s ease-in-out;
     transition-property: background-color, color;
     color: var(--opp-bg);
+    border: none !important;
 }
 
 div.cs {

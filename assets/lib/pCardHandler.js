@@ -7,7 +7,7 @@ class PCardHandler {
         return this.elem.classList.contains('open');
     }
 
-    toggle(evt) {
+    toggle() {
         this.open = !this.open;
     }
 

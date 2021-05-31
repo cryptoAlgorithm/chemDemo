@@ -241,6 +241,21 @@ div.promo > div.p-card > img {
 }
 /* End of parallex stuff */
 
+div.promo > div.p-card {
+    transform: translate(0, 0);
+    transition: all 1s ease-in-out;
+}
+div.promo > div.p-card.huge {
+    width: 100vw!important;
+    height: 100vh!important;
+    z-index: 12;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+}
+
 /* More button */
 
 div.promo > div.p-card > button.ic-btn {

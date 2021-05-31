@@ -17,18 +17,21 @@
     <link rel="stylesheet" href="assets/index.min.css">
     <link rel="stylesheet" href="assets/atoms.min.css">
     <link rel="stylesheet" href="assets/fonts.min.css">
+    <link rel="stylesheet" href="assets/lib/ripple.min.css">
 
     <script src="assets/lib/pCardHandler.min.js" defer></script>
     <script src="assets/lib/themeHandler.min.js" defer></script>
     <script src="assets/javascript/main.min.js" defer></script>
+    <script src="assets/lib/ripple.min.js" defer></script>
     <script src="assets/javascript/index.min.js" defer></script>
+</head>
 <body>
 <header class="fr">
     <img src="static/img/favicon.svg" alt="Logo" aria-hidden="true" width="32" height="32">
     <h2 class="fs-1__5 mg-l__-5">Ammonia as Fuel</h2>
     <div class="ff"></div>
     <!-- Theme button -->
-    <button class="ic-btn ctr-c" id="tBtn">
+    <button class="ic-btn ctr-c ripple" id="tBtn">
         <img src="static/icns/dark_mode_white.svg" alt="Change to dark theme" class="l lm">
         <img src="static/icns/light_mode_white.svg" alt="Change to light theme" class="d dm">
     </button>
@@ -55,7 +58,11 @@
                 </div>
                 <div class="hero hero__r2 e-z12">
                     <div class="hr-c">
-                        <h3>The 4 types of ammonia each have their role to play in our daily lives. In fact, they merely differ by the way hydrogen is harnessed to produce the ammonia for use. We can see more sustainable transport, plant growth, and other useful technology being invented with the innovative utilisation of ammonia as a fuel. Ammonia is definitely the fuel of the future!</h3>
+                        <h3>
+                            Ammonia: the dangerous base, the gaseous chemical. Some say that it's the fuel of the future,
+                            others say it has many applications, but in what way so? How do we commercially produce ammonia,
+                            and why is ammonia a better choice of fuel compared to others, say, hydrogen? Read on to find out more.
+                        </h3>
                     </div>
                 </div>
             </main>
@@ -69,7 +76,7 @@
                 <div class="ctr-c f-s">
                     <div class="c mg-r__1 mg-l__1 rd__1 p-txt ctr-c fd-c">
                         <h2>Some facts:</h2>
-                        <ul>
+                        <ul class="fs-1__2">
                             <li>Produced by Haber-Bosch process</li>
                             <li>Reacting hydrogen and atmospheric nitrogen under pressure</li>
                             <li>Produced nearly all of the world’s ammonia</li>
@@ -77,7 +84,7 @@
                     </div>
 
                     <iframe width="560" height="315" allowfullscreen loading="lazy"
-                            class="rd__1" frameborder="0" title="More about ammonia fuel" style="border-bottom-left-radius:16.001px"
+                            class="rd__1 e-z12" frameborder="0" title="More about ammonia fuel" style="border-bottom-left-radius:16.001px"
                             srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/H1ZacZ_r1MQ?autoplay=1&modestbranding=1&rel=0><img src=https://img.youtube.com/vi/H1ZacZ_r1MQ/hqdefault.jpg alt='More about ammonia'><span>▶</span></a>"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
                 </div>
@@ -91,13 +98,11 @@
                 <div class="c mg-l__1 mg-r__1 rd__1"><h2 class="fs-3 p-txt">How is ammonia fuel produced?</h2></div>
                 <div class="ctr-c f-s">
                     <div class="c mg-r__1 mg-l__1 rd__1 p-txt ctr-c">
-                        <h3>
-                            <ol>
-                                <li>Using modern ammonia-producing plant</li>
-                                <li>Natural gas, liquified petroleum gas, or petroleum naphtha converted to gaseous hydrogen</li>
-                                <li>Hydrogen combined with nitrogen to produce ammonia via the Haber-Bosch process</li>
-                            </ol>
-                        </h3>
+                        <ol class="fs-1__5">
+                            <li>Using modern ammonia-producing plant</li>
+                            <li>Natural gas, liquified petroleum gas, or petroleum naphtha converted to gaseous hydrogen</li>
+                            <li>Hydrogen combined with nitrogen to produce ammonia via the Haber-Bosch process</li>
+                        </ol>
                     </div>
                     <img class="rd__1 e-z6 mg-l__1 mg-r__1" src="static/img/process.png" />
                 </div>
@@ -110,8 +115,8 @@
             <div class="c mg-l__1 mg-r__1 rd__1"><h2 class="fs-3 p-txt mg-txt">The four colors of Ammonia</h2></div>
 
             <div class="promo mg-t__1 mg-b__1">
-                <div class="p-card c-1">
-                    <button class="ic-btn ctr-c lg"><img src="static/icns/add_white.svg" alt="More"></button>
+                <div class="p-card c-1 e-z12" id="cd-1">
+                    <button class="ic-btn ctr-c lg ripple"><img src="static/icns/add_white.svg" alt="More"></button>
                     <!------>
                     <h1 class="fs-2 mg-b__-75">Grey</h1> <!-- Title -->
                     <img class="ctr-s e-z6" src="static/img/gray.svg" alt="Gray Ammonia (Factory producing C02 pollution)">
@@ -123,12 +128,12 @@
                                 reacts hydrogen and atmospheric nitrogen.
                                 The hydrogen often comes from the steam reformation of methane, a process that emits CO2.
                             </h3>
-                            <a class="btn-rp f-btn" href="./viewer.html?p=Z3JleQ==" target="_blank">Read more</a>
+                            <button class="ripple filled btn" onclick="linkHandler('./viewer.html?p=Z3JleQ==', 1)">Read more</button>
                         </div>
                     </div>
                 </div>
-                <div class="p-card c-2">
-                    <button class="ic-btn ctr-c lg"><img src="static/icns/add_white.svg" alt="More"></button>
+                <div class="p-card c-2 e-z12" id="cd-2">
+                    <button class="ic-btn ctr-c lg ripple"><img src="static/icns/add_white.svg" alt="More"></button>
                     <!------>
                     <h1 class="fs-2 mg-b__-75">Blue</h1>
                     <img class="ctr-s e-z6" src="static/img/blue.svg" alt="Blue Ammonia (Hand holding molecule)">
@@ -142,12 +147,12 @@
                                 Using CO2 for enhanced oil recovery, for example,
                                 isn’t as environmentally beneficial as injecting it into the ground permanently.
                             </h3>
-                            <a class="btn-rp f-btn" href="./viewer.html?p=Ymx1ZQ==" target="_blank">Read more</a>
+                            <button class="ripple filled btn" onclick="linkHandler('./viewer.html?p=Ymx1ZQ==', 2)">Read more</button>
                         </div>
                     </div>
                 </div>
-                <div class="p-card c-3">
-                    <button class="ic-btn ctr-c lg"><img src="static/icns/add_white.svg" alt="More"></button>
+                <div class="p-card c-3 e-z12" id="cd-3">
+                    <button class="ic-btn ctr-c lg ripple"><img src="static/icns/add_white.svg" alt="More"></button>
                     <!------>
                     <h1 class="fs-2 mg-b__-75">Green</h1>
                     <img class="ctr-s e-z6" src="static/img/green.svg" alt="Green Ammonia (Wind turbines)">
@@ -159,12 +164,12 @@
                                 an order of magnitude smaller than a typical ammonia plant.
                                 A massive project in Saudi Arabia, however, aims to make more than 1 million metric tons of ammonia per year.
                             </h3>
-                            <a class="btn-rp f-btn" href="./viewer.html?p=Z3JlZW4=" target="_blank">Read more</a>
+                            <button class="ripple filled btn" onclick="linkHandler('./viewer.html?p=Z3JlZW4=', 3)">Read more</button>
                         </div>
                     </div>
                 </div>
-                <div class="p-card c-4">
-                    <button class="ic-btn ctr-c lg"><img src="static/icns/add_white.svg" alt="More"></button>
+                <div class="p-card c-4 e-z12" id="cd-4">
+                    <button class="ic-btn ctr-c lg ripple"><img src="static/icns/add_white.svg" alt="More"></button>
                     <!------>
                     <h1 class="fs-2 mg-b__-75">Turquoise</h1>
                     <img class="ctr-s e-z6" src="static/img/turquoise.svg" alt="Turquoise Ammonia (Diagram of 2 atoms)">
@@ -175,7 +180,7 @@
                                 which is reacted with nitrogen to make ammonia.
                                 The industry thinks of turquoise ammonia as somewhere between green and blue.
                                 A prominent project is Monolith Materials’ carbon black plant in Nebraska.</h3>
-                            <a class="btn-rp f-btn" href="./viewer.html?p=dHVycXVvaXNl" target="_blank">Read more</a>
+                            <button class="ripple filled btn" onclick="linkHandler('./viewer.html?p=dHVycXVvaXNl', 4)">Read more</button>
                         </div>
                     </div>
                 </div>
@@ -185,7 +190,7 @@
     </div>
     <div id="group5" class="parallax__group">
         <div class="parallax__layer parallax__layer--fore ctr-c fd-c">
-            <div class="c mg-l__1 mg-r__1 rd__1"><h2 class="fs-3 p-txt mg-txt">The comparison of ammonia</h2></div>
+            <div class="c mg-l__1 mg-r__1 rd__1"><h2 class="fs-3 p-txt mg-txt">Why Ammonia?</h2></div>
 
             <div class="c mg-r__1 mg-l__1 mg-t__1 rd__1 p-txt ctr-c p-no">
                 <table class="fs-1__5">
@@ -258,6 +263,8 @@
     </div>-->
     <div id="group7" class="parallax__group" style="height:50vh">
         <div class="parallax__layer parallax__layer--base p-txt__bg">
+            <h2>The 4 types of ammonia each have their role to play in our daily lives. In fact, they merely differ by the way hydrogen is harnessed to produce the ammonia for use. We can see more sustainable transport, plant growth, and other useful technology being invented with the innovative utilisation of ammonia as a fuel. Ammonia is definitely the fuel of the future!</h2>
+
             <div class="fr"><h2>Ammonia as Fuel</h2></div>
             <div class="fr">
                 <p>By Dylan Gan Kai Jie, Wang Zerui & Tyler Ng Pek Han in NUS High School of Mathematics and Science for the Chem.comm Challenge by NUS</p>
